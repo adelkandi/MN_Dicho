@@ -36,3 +36,4 @@ while abs(a-b)/2>eps:
 
 print('the solution of this function is ',str(x))
 print(n)
+# graph of the function :
