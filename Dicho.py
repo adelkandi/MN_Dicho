@@ -5,7 +5,7 @@ import numpy
 # The function we wanna calculate there racins "Solutions"
 def f(x):
 
-    x**3-(11/6)*(x**2)+x-1/6
+    return x**3-(11/6)*(x**2)+x-1/6
 
 # Dichotonomie Mthode of calculation :
 
