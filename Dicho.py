@@ -47,5 +47,6 @@ else:
     print(f'The root, according to the dichotomy method, is at the point x = {root}')  # print the solution as Root = x    f(root)=~o 
 
 #print('the solution of this function is ',)
-print(n) #number of iteration  
+print(n,root) #number of iteration  
 # graph of the function :
+# use matplotlib
