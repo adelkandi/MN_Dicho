@@ -61,3 +61,8 @@ if pltr == "y" :
     plt.xlabel("axe x")
     plt.ylabel("axe y")     
     plt.show()                  # if True the graph will show up 
+elif pltr == "n":
+    print("   ")
+else:
+    print("Error, You didnt shose [y/n] Try again.")
+
