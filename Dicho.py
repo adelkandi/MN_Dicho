@@ -1,7 +1,8 @@
 import imp
 import math
+from matplotlib import pyplot as plt
 from numpy import real 
-import numpy 
+import numpy as np 
 
 
 
@@ -9,7 +10,7 @@ import numpy
 # The function we wanna calculate there racins "Solutions"
 def f(x):
 
-    return x**3-(11/6)*(x**2)+x-1/6
+    return x**3-(11/6)*(x**2)+x-1/6 
 
 # Dichotonomie Mthode of calculation :
 
@@ -21,8 +22,8 @@ b = int(input("Give us the second nimber of the interval: "))
 eps = 10**-2
 # init n 
 n=1
-# the 
-while abs(a-b)/2>eps:
+# Dichotomy Algorithm :
+while abs(f(b)-f(a)) > eps:
     root = None  #intialise the root "solution " to None 
     mid = (a+b)/2
     #print(f'abs((a-b)/2)>eps was True, x is {x}!')
@@ -50,3 +51,16 @@ else:
 print(n,root) #number of iteration  
 # graph of the function :
 # use matplotlib
+
+pltr = input("Do you wanna plot the fonction graph?:[y/n]:")
+
+x = np.linspace(a,1,b)   # the interval of the plot [a,b] and the x
+
+y = x**3-(11/6)*(x**2)+x-1/6   # the function we wanna plot f(x) = y
+
+if pltr == "y" :
+    plt.plot(x, y, c = "black",)     # use any color you want the standard is blue 
+    plt.title(input("Give us the Function Title"))
+    plt.xlabel("axe x")
+    plt.ylabel("axe y")     
+    plt.show()                  # if True the graph will show up 
