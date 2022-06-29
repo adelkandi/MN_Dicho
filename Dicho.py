@@ -1,8 +1,8 @@
-import imp
-import math
-from matplotlib import pyplot as plt
-from numpy import real 
+
+
+
 import numpy as np 
+from matplotlib import pyplot as plt
 
 
 
@@ -20,17 +20,16 @@ b = int(input("Give us the second nimber of the interval: "))
 
 #eps = real(input("Give us the epsilon number :")) # nombre of iteration 
 eps = 10**-2
-# init n 
-n=1
+n = 1 #Init at 1  
 # Dichotomy Algorithm :
-while abs(f(b)-f(a)) > eps:
-    root = None  #intialise the root "solution " to None 
-    mid = (a+b)/2
-    #print(f'abs((a-b)/2)>eps was True, x is {x}!')
+def dichotomy(a,b,eps):
+    while abs(f(b)-f(a)) > eps:
+        root = None  #intialise the root "solution " to None 
+        mid = (a+b)/2
+    print(f'abs((a-b)/2)>eps was True, x is {x}!') ####
     # check 
     if f(mid) == 0 or abs(f(mid)) < eps:  
-            root = mid                    # This to  find out if the mid is close to the solution 
-            break
+        root = mid                    # This to  find out if the mid is close to the solution 
     
     if f(a)*f(mid) <= 0:
         a = mid             # make the a mid to do another mid also until it came up with the solution 
@@ -39,16 +38,14 @@ while abs(f(b)-f(a)) > eps:
         b = mid             #make the b mid to do another mid also until it came up with the solution
 
     n = n + 1
+    if root is None:
+        print('Root not found')
+    else:
+        print(f'The root, according to the dichotomy method, is at the point x = {root}')
 
+#dichotomy(a,b,eps)
 
-# Print the result:
-if root is None:
-    print('Root not found')
-else:
-    print(f'The root, according to the dichotomy method, is at the point x = {root}')  # print the solution as Root = x    f(root)=~o 
-
-#print('the solution of this function is ',)
-print(n,root) #number of iteration  
+ 
 # graph of the function :
 # use matplotlib
 
@@ -60,7 +57,7 @@ y = x**3-(11/6)*(x**2)+x-1/6   # the function we wanna plot f(x) = y
 
 if pltr == "y" :
     plt.plot(x, y, c = "black",)     # use any color you want the standard is blue 
-    plt.title(input("Give us the Function Title"))
+    plt.title(input("Give us the Function Title: "))
     plt.xlabel("axe x")
     plt.ylabel("axe y")     
     plt.show()                  # if True the graph will show up 
