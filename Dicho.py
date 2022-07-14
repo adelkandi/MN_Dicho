@@ -39,9 +39,9 @@ def dichotomy(a,b,eps):
 
     n = n + 1
     if root is None:
-        print('Root not found')
+        print('Root not found') # solution not found 
     else:
-        print(f'The root, according to the dichotomy method, is at the point x = {root}')
+        print(f'The root, according to the dichotomy method, is at the point x = {root}') # print the solution
 
 #dichotomy(a,b,eps)
 
@@ -62,7 +62,7 @@ if pltr == "y" :
     plt.ylabel("axe y")     
     plt.show()                  # if True the graph will show up 
 elif pltr == "n":
-    print("   ")
+    print("OK,Thank you")
 else:
     print("Error, You didnt shose [y/n] Try again.")
 
