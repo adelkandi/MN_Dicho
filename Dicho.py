@@ -7,6 +7,8 @@ from matplotlib import pyplot as plt
 
 
 
+
+
 # The function we wanna calculate there racins "Solutions"
 def f(x):
 
