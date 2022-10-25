@@ -53,18 +53,21 @@ def dichotomy(a,b,eps):
 
 pltr = input("Do you wanna plot the fonction graph?:[y/n]:")
 
-x = np.linspace(a,1,b)   # the interval of the plot [a,b] and the x
+x = np.linspace(a,0.0001,b)   # the interval of the plot [a,b] and the x
 
 y = x**3-(11/6)*(x**2)+x-1/6   # the function we wanna plot f(x) = y
 
 if pltr == "y" :
     plt.plot(x, y, c = "black",)     # use any color you want the standard is blue 
     plt.title(input("Give us the Function Title: "))
-    plt.xlabel("axe x")
+    plt.xlabel("axe x")                # name the axes as x and y ...
     plt.ylabel("axe y")     
     plt.show()                  # if True the graph will show up 
 elif pltr == "n":
     print("OK,Thank you")
+
+
+# if there is an error :
 else:
     print("Error, You didnt shose [y/n] Try again.")
 
