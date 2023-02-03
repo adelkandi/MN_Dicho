@@ -14,7 +14,7 @@ def f(x):
 
     return x**3-(11/6)*(x**2)+x-1/6 
 
-# Dichotonomie Mthode of calculation :
+# Dichotonomie Methode of calculation :
 
 # The interval 
 a = int(input("Give us the first number of the interval: "))
@@ -69,5 +69,5 @@ elif pltr == "n":
 
 # if there is an error :
 else:
-    print("Error, You didnt shose [y/n] Try again.")
+    print("Error, You didn't choose [y/n] Try again.")
 
